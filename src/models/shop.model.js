@@ -14,7 +14,7 @@ const shopSchema = new Schema({
     email: {
         type: String,
         unique: true,
-        trim: true,
+        trim: true, // trim là phương thức để loại bỏ khoảng trắng ở đầu và cuối của chuỗi
     },
     password: {
         type: String,

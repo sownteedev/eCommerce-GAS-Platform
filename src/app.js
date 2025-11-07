@@ -10,6 +10,8 @@ const app = express();
 app.use(morgan("dev")); // logger
 app.use(helmet()); // security
 app.use(compression()); // compression
+app.use(express.json()); // parse json
+app.use(express.urlencoded({extended: true})); // parse urlencoded
 
 // init db
 require("./dbs/mongoo.db");
@@ -18,5 +20,6 @@ require("./dbs/mongoo.db");
 app.use('/', require('./routes'));
 
 // handle errors
+app.use()
 
 module.exports = app;
